@@ -19,10 +19,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 from streamlit_mic_recorder import mic_recorder,speech_to_text
 
-#load_dotenv('.env')
-openai_api_key = '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'
-#openai_api_key = os.environ.get("OPENAI_KEY")
-searchapi_api_key = 'MXGKXxDH52sQ5XGAqT4RZoZi'
+load_dotenv('.env')
+searchapi_api_key = os.environ.get("SEARCH_KEY")
+openai_api_key = os.environ.get("OPENAI_KEY")
 
 def get_pdf_text(pdf_docs):
     text = ""
